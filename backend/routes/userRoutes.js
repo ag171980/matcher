@@ -3,7 +3,7 @@ import cors from 'cors'
 import bodyParser from 'body-parser'
 import { getAllUsers,getRandomUsers, getUserById, crearUsuario, validarUsuario } from "../controllers/userController.js"
 import multer from "multer"
-const upload = multer({dest:"./uploads/"})
+const upload = multer({dest:"../frontend/src/uploads/"})
 const router = express.Router()
 
 router.use(bodyParser.urlencoded({ extended: false }));
