@@ -7,7 +7,7 @@ const upload = multer({dest:"../frontend/src/uploads/"})
 const router = express.Router()
 
 router.use(bodyParser.urlencoded({ extended: false }));
-router.use(bodyParser.json());
+router.use(bodyParser.json({limit:"100mb"}));
 router.use(cors());
 router.get("/user", getAllUsers)
 router.get("/users", getRandomUsers)

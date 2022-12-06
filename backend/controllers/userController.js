@@ -69,7 +69,7 @@ export const crearUsuario = async (req, res) => {
                     updatedAt: req.body.updatedAt
                 }, { fields: ['id_user','name', 'email', 'gender', 'genderInterest', 'age', 'password', 'description', 'img1', 'img2', 'img3', 'img4', 'createdAt', 'updatedAt'] })
             // { fields: ['name', 'email', 'gender', 'genderInterest', 'age', 'password', 'description', 'img1', 'img2', 'img3', 'img4', 'createdAt', 'updatedAt'] }
-            res.json({ message: "Usuario registrado correctamente" })
+            res.json({ message: "Usuario registrado correctamente", files: req.files })
         } else {
             res.json({ message: "hay un usuario con este correo" })
         }
