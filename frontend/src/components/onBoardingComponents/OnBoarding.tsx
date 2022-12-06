@@ -7,6 +7,8 @@ import axios from 'axios'
 //http://localhost:8000/createUser
 //https://backend-matcher-production.up.railway.app/createUser
 
+//https://matcher.up.railway.app/createUser
+
 type Props = {
     modalState: boolean
     setModalState: React.Dispatch<React.SetStateAction<boolean>>
@@ -80,7 +82,7 @@ const OnBoarding = ({ modalState, setModalState }: Props) => {
 
         try {
             const response = await axios.post<FormData>(
-                'https://backend-matcher-production.up.railway.app/createUser',
+                'https://matcher.up.railway.app/createUser',
                 dataToSend,
                 {
                     headers: {
